@@ -21,6 +21,7 @@ void main() {
     routes: {
       '/login/': (context) => const LoginView(),
       '/register/': (context) => const RegisterView(),
+      '/notes/': (context) => const NotesView(),
     },
   ));
 }
@@ -148,9 +149,12 @@ Future<bool> showLogOutDialog(BuildContext context) {
               onPressed: () {
                 Navigator.of(context).pop(true);
               },
-              child: const Text('Log out')),
+              child: const Text('Sign out')),
         ],
       );
     },
   ).then((value) => value ?? false);
+  //then means if value is null which can be due to user pressing back button
+  //so return false
+  //Future is used because the response depends on the user and not us... It is not instant or pre-determined.
 }
