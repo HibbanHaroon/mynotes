@@ -23,6 +23,7 @@ void main() {
       loginRoute: (context) => const LoginView(),
       registerRoute: (context) => const RegisterView(),
       notesRoute: (context) => const NotesView(),
+      verifyEmailRoute: (context) => const VerifyEmailView(),
     },
   ));
 }
@@ -46,6 +47,7 @@ void main() {
 //print(e.runtimeType); //shows the type of error
 //Chapter 14: We do not push a widget inside a Future Builder
 //Chapter 16: Named Router vs Anonymous Router
+//use overlay so that the dialog stays
 //
 
 class HomePage extends StatelessWidget {
